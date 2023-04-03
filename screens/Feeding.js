@@ -162,4 +162,5 @@ const styles = StyleSheet.create({
     marginLeft:10,
     color:'white'
   },
+  //ak first commit
 });
