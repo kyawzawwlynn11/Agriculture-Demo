@@ -8,7 +8,7 @@ export default function Rating() {
     <View style={styles.container}>
       <Text style={{marginTop:50,marginLeft:15}}>သီးနှံအထွက်နှုန်း</Text>
       <View style={[styles.Btn,{backgroundColor:'#EDF2F6',borderWidth:0}]}>
-        <TextInput placeholder='အထွက်နှုန်း' style={{color:'white', borderColor:'#2D3747',alignItems:'center',justifyContent:'center', width:'74%',height:'100%', borderWidth:1, borderRadius:5, backgroundColor:'#4CD195',}}/>
+        <TextInput placeholderTextColor={'white'} placeholder='အထွက်နှုန်း' style={{paddingLeft:15,color:'white', borderColor:'#2D3747',width:'74%',height:'100%', borderWidth:1, borderRadius:5, backgroundColor:'#4CD195'}}/>
         <TouchableOpacity style={[styles.Btn,{flexDirection:'row',width:'23%',height:'100%',marginTop:0,marginLeft:10}]}>
           <Text style={styles.text}>ယူနစ်</Text>
           <Icon name='caretdown' size={14} style={{marginLeft:10}}/>
@@ -22,7 +22,7 @@ export default function Rating() {
 
         <TouchableOpacity style={styles.Btn}>
           <Icon2 name='radio-btn-active' size={14} style={{marginLeft:10}}/>
-          <Text style={{marginLeft:10,color:'black'}}>အသင့်တင့်</Text>
+          <Text style={{marginLeft:10,color:'white'}}>အသင့်တင့်</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.Btn}>
@@ -30,7 +30,7 @@ export default function Rating() {
           <Text style={{marginLeft:10,color:'white'}}>အရည်အသွေးညံ့</Text>
         </TouchableOpacity>
 
-        <TextInput placeholder='ခန့်မှန်းပေါက်စျေး' keyboardType='numeric' style={{color:'white', borderColor:'#2D3747',alignItems:'center',justifyContent:'center', marginTop:15,marginLeft:10,width:'95%',height:'8%', borderWidth:1, borderRadius:5, backgroundColor:'#4CD195',}}/>
+        <TextInput placeholderTextColor={'white'} placeholder='ခန့်မှန်းပေါက်စျေး' keyboardType='numeric' style={{paddingLeft:15,color:'white', borderColor:'#2D3747',alignItems:'center',justifyContent:'center', marginTop:15,marginLeft:10,width:'95%',height:'8%', borderWidth:1, borderRadius:5, backgroundColor:'#4CD195',}}/>
 
         <View style={[styles.Btn,{backgroundColor:'#EDF2F6',borderWidth:0}]}>
         <TouchableOpacity style={[styles.Btn,{width:'48.5%',height:'100%',marginTop:0,marginLeft:0}]}>
@@ -39,11 +39,11 @@ export default function Rating() {
         </TouchableOpacity>
         <TouchableOpacity style={[styles.Btn,{width:'48.5%',height:'100%',height:'100%',marginTop:0}]}>
           <Icon2 name='radio-btn-active' size={14} style={{marginLeft:10}}/>
-          <Text style={{marginLeft:10,color:'black'}}>မရောင်းရသေး</Text>
+          <Text style={{marginLeft:10,color:'white'}}>မရောင်းရသေး</Text>
         </TouchableOpacity>
         </View>
 
-        <TextInput placeholder='မှတ်ချက်' keyboardType='default' style={{color:'white', borderColor:'#2D3747',alignItems:'center',justifyContent:'center', marginTop:15,marginLeft:10,width:'95%',height:'8%', borderWidth:1, borderRadius:5, backgroundColor:'#4CD195',}}/>
+        <TextInput placeholderTextColor={'white'} placeholder='မှတ်ချက်' keyboardType='default' style={{color:'white', borderColor:'#2D3747',alignItems:'center',justifyContent:'center', marginTop:15,marginLeft:10,width:'95%',height:'8%', borderWidth:1, borderRadius:5, backgroundColor:'#4CD195', paddingLeft:15}}/>
 
         <TouchableOpacity style={[styles.Btn,{backgroundColor:'#2D3747',alignItems:'center',justifyContent:'center',marginTop:'17%'}]}>
           <Text style={{color:'white'}}>သိမ်းမည်</Text>

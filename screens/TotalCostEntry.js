@@ -44,7 +44,7 @@ export default function TotalCostEntry() {
             <Icon name='camera' size={20} style={styles.icon}/> 
             <Text style={styles.text}>ဓာတ်ပုံမှတ်တမ်း</Text>
         </TouchableOpacity>
-        <TextInput keyboardType='default' placeholder='မှတ်ချက်ရေးသားရန်' style={[styles.Btn,{height:'8%',backgroundColor:'#4CD195',color:'white',textAlign:'center'}]}/>
+        <TextInput keyboardType='default' placeholderTextColor={'white'} placeholder='မှတ်ချက်ရေးသားရန်' style={[styles.Btn,{height:'8%',backgroundColor:'#4CD195',color:'white',textAlign:'center'}]}/>
         <TouchableOpacity style={[styles.Btn,{height:'7%',marginTop:50 , backgroundColor:'#2D3747',borderColor:'gray',justifyContent:'center'}]}>
             <Text style={{color:'white'}}> သိမ်းမည် </Text>
         </TouchableOpacity>

@@ -8,12 +8,12 @@ export default function Feeding() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
         <TouchableOpacity  style={[styles.Btn,{marginTop:'15%',borderWidth:0,flexDirection:'row',backgroundColor:'#4CD195'}]}>
-          <Icon name='search'size={20} style={{marginTop:'12%',marginLeft:20,height:'100%',width:'10%',borderWidth:0}}/>
-          <TextInput placeholder='တိုက်ရိုက်ရှာဖွေရန်' style={[styles.Btn,{marginTop:0,height:'100%',width:'80%',borderWidth:0}]}/>
+          <Icon name='search'size={20} color={'white'} style={{marginTop:'12%',marginLeft:20,height:'100%',width:'10%',borderWidth:0}}/>
+          <TextInput placeholderTextColor={'white'} placeholder='တိုက်ရိုက်ရှာဖွေရန်' style={[styles.Btn,{marginTop:0,height:'100%',width:'80%',borderWidth:0}]}/>
         </TouchableOpacity>
 
         <TouchableOpacity style={[styles.Btn,{}]}>
-          <Text style={[styles.text,{color:'black'}]}>ဓာတ်မြေသြဇာ</Text>
+          <Text style={[styles.text,{}]}>ဓာတ်မြေသြဇာ</Text>
           <Icon2 name='caretdown' style={{marginLeft:'65%'}}/>
         </TouchableOpacity>
 

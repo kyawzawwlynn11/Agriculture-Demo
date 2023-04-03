@@ -8,7 +8,7 @@ export default function SeasonClose() {
      <Text style={{marginTop:60,marginLeft:15}}>ရာသီပိတ်သိမ်းခြင်းအကြောင်းအရင်း</Text>
      <TouchableOpacity style={styles.Btn}>
       <Icon name='radio-btn-active' size={14} style={{marginLeft:10}}/>
-      <Text style={{marginLeft:10}}>ရိတ်သိမ်းပီးစီး</Text>
+      <Text style={{marginLeft:10,color:'white'}}>ရိတ်သိမ်းပီးစီး</Text>
      </TouchableOpacity>
 
      <TouchableOpacity style={styles.Btn}>
