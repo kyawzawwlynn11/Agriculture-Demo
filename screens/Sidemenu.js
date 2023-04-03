@@ -12,38 +12,43 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 const Sidemenu = ({navigation}) => {
 
 contentsList = [
-  {title:"Profile", icon:<MaterialCommunityIcons name="human-greeting-variant" size={28} color="black" />,key : 1},
-  {title:"Messages", icon:<MaterialCommunityIcons name="android-messages" size={28} color="black" />, key: 2},
-  {title: "Activity", icon:<Feather name="activity" size={28} color="black" />, key: 3},
-  {title: "Lists", icon:<Feather name="list" size={28} color="black" />, key: 4},
-  {title: 'Reports', icon:<AntDesign name="profile" size={28} color="black" />, key:5},
-  {title: "Statistics", icon:<Ionicons name="stats-chart-outline" size={28} color="black" />, key:6},
-  {title: "Sign Out", icon:<Octicons name="sign-out" size={28} color="black" />,key:7}
-];
+  {title:"အစိမ်းရောင်မှတ်တမ်း", icon:<Image source={require('../assets/leaflogo.png')} style={{width: 50, height:50, borderRadius: 100}}/>,key : 1},
+  {title:"သွင်းအားစုတွက်ချက်ရန်", icon:<Image source={require('../assets/calculatoricon.png')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 2},
+  {title:"ဝယ်ယူမှုမှတ်တမ်း", icon:<Image source={require('../assets/shoppingcarticon.jpeg')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 3},
+  {title:"သင့်အဖွဲ့အစည်းများ", icon:<Image source={require('../assets/group.jpeg')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 4},
+  {title:"အသုံးဝင်သောလိပ်စာများ", icon:<Image source={require('../assets/addressicon.jpg')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 5},
+  {title:"စိတ်ကြိုက်ပို့စ်များ", icon:<Image source={require('../assets/saveicon.jpg')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 6},
+]
+
 
 bottomList = [
-  {title: "Tell a friend", icon:<AntDesign name="sharealt" size={28} color="black" />,key:8},
-  {title: "Help and feeback", icon:<Feather name="help-circle" size={28} color="black" />, key: 9 }
+  {title: 'ပြင်ဆင်ချက်များ' , icon: <Image source={require('../assets/settingicon.png')} style={{width: 35, height:35, borderRadius: 100, marginTop: 5}}/>, key: 7 }
 ];
   const [selectedId, setSelectedId] = useState(null);
 
-  const pressHandler = (key, title) => {
+  const pressHandler = (key,item) => {
        setSelectedId(key);
-       navigation.navigate(title)
-       console.log(selectedId)
+       console.log(item)
+      navigation.navigate(item)
   }
 
 
   return (
     <View style = {styles.container}>
       <View style = {styles.topsection}>
+        <View style={{flexDirection: 'row'}}>
         <Image 
-           source = {require('../assets/profile.jpeg')}
+           source = {require('../assets/blankprofile.jpg')}
            style= {styles.profile}
         />
-      <Text style={{fontWeight: FONTWEIGHT.bold, fontSize: SIZES.h1, marginTop: 20, color: '#311D3F'}}>Suzan</Text>
-      <Text style={{ fontSize: SIZES.h3, marginTop: 5, color:'#311D3F'}}>3032 Followers</Text>
-      
+      <View>
+        <Text style={{fontSize: SIZES.h2, fontWeight: FONTWEIGHT.bold, marginLeft: 15, marginTop: 10, color: COLORS.secondary}}>Daw Nwe Aye</Text>
+        <Text style={{fontSize: SIZES.h5, fontWeight: 'normal', marginLeft: 15, marginTop: 10, color: COLORS.secondary}}>တောင်သူလယ်သမား-စစ်ကိုင်းတိုင်း</Text>
+      </View>
+      </View>
+      <TouchableOpacity style = {{width: '98%', height: 35,backgroundColor: '#c5d3f7', justifyContent: 'center', alignItems: 'center', marginTop: 12, alignSelf: 'center', elevation: 10}}>
+        <Text style = {{color: '#00a7e7', fontSize: SIZES.h4, fontWeight: 'bold'}}> ကိုယ်ရေး အချက်အလက် သို့</Text>
+      </TouchableOpacity>
       </View>
       <View style = {styles.midsection}>
       <FlatList 
@@ -52,7 +57,7 @@ bottomList = [
         return (
           <TouchableOpacity  key = {item.key}style = {[styles.content, selectedId === item.key && {backgroundColor:COLORS.lightPurple}]} onPress = {()=>pressHandler(item.key, item.title)}>
             {item.icon}
-            <Text style = {[{marginLeft: 20, fontSize: SIZES.h3, marginTop: 5}, selectedId === item.key && {color: COLORS.primary}]}>{item.title}</Text>
+            <Text style = {[{marginLeft: 20, fontSize: SIZES.h4, marginTop: 17}, selectedId === item.key && {color: COLORS.primary}]}>{item.title}</Text>
           </TouchableOpacity>
         );
       }}
@@ -63,9 +68,10 @@ bottomList = [
       data= {bottomList}
       renderItem={({item}) => {
         return (
-          <TouchableOpacity  key = {item.key} style = {[styles.bottomcontent, selectedId === item.key && {backgroundColor:COLORS.lightPurple}]} onPress={()=>pressHandler(item.key)}>
+          <TouchableOpacity  key = {item.key} style = {[styles.bottomcontent, selectedId === item.key && {backgroundColor:COLORS.lightPurple}]} onPress={()=>pressHandler(item.key, item.title)}>
+            <Text style = {[{marginLeft: 20, fontSize: SIZES.h3, marginTop: 9 }, selectedId === item.key && {color: COLORS.primary}]}>{item.title}</Text>
             {item.icon}
-            <Text style = {[{marginLeft: 20, fontSize: SIZES.h3, marginTop: 5}, selectedId === item.key && {color: COLORS.primary}]}>{item.title}</Text>
+            
           </TouchableOpacity>
         );
       }}
@@ -83,33 +89,38 @@ const styles = StyleSheet.create({
 
   },
   topsection: {
-    flex: 0.25,
-    backgroundColor: COLORS.primary,
+    flex: 0.15,
+    backgroundColor: COLORS.mainbackground,
     paddingTop: 50,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     paddingVertical: 29
+    
   },
   midsection: {
-    flex: 0.65,
-    backgroundColor: COLORS.white,
+    flex: 0.75,
+    backgroundColor: COLORS.mainbackground,
    
 
   },
   bottomsection: {
-    flex: 0.2,
-    backgroundColor: COLORS.white
+    flex: 0.10,
+    backgroundColor: COLORS.mainbackground
   },
   profile: {
-    width: 100,
-    height: 100,
+    width: 70,
+    height: 75,
     borderRadius: 100
   },
   content: {
-    backgroundColor: '#fff',
+    backgroundColor: '#faf9f6',
     flexDirection: 'row',
-    paddingVertical: 16,
+    paddingVertical: 10,
     paddingHorizontal: 20,
-    marginVertical: 1
+    marginTop: 7,
+    width: '95%',
+    alignSelf: 'center',
+    borderRadius: 12,
+
     
   },
   bottomcontent: {
@@ -117,8 +128,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: 14,
     paddingHorizontal: 20,
-    marginVertical: 1
     
+    gap: 70
   }
 
 })

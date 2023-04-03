@@ -3,10 +3,10 @@ const {Dimensions} = require('react-native');
 const {width, height} = Dimensions.get('window');
 
 export const COLORS = {
-    primary : '#E23E57',
-    lightPurple: '#FFDCDC',
-    grey: '#585656',
-    lightGrey: '#DCDADD',
+    primary : '#4CD195',
+    secondary: '#2D3747',
+    mainbackground: '#EDF2F6',
+    green: '#17938b',
     white: '#FFF',
     title: '#482755',
 };
