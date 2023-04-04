@@ -74,6 +74,7 @@ export default function App() {
             headerShown: false
           }}
           />
+          
         </Drawer.Navigator>
 
       </NavigationContainer>
