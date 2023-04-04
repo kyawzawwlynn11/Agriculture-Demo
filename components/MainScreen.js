@@ -32,9 +32,12 @@ const [menu, setMenu] = useState([
           <Image source = {item.src} style={{width: 150, height:120, resizeMode: 'cover'}}/>
         </View>
         <View style={{ backgroundColor: '#fff', width: '55%', height: '85%', marginTop: 10, alignItems: 'flex-start',padding: 30, gap: 9}}>
-             <Text>{item.weather}</Text>
+             
              <Text style={{fontSize: SIZES.h2 ,}}>{item.type}</Text>
              <Text>{item.area}</Text>
+             <View style={{backgroundColor: COLORS.green, width: 100, height: 30, justifyContent: 'center', alignItems: 'center', borderRadius: 5, elevation: 5}}>
+             <Text style={{color: '#fff'}}>{item.weather}</Text>
+             </View>
         </View>
         </View>
         
