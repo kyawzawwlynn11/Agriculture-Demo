@@ -35,13 +35,13 @@ const contentList = [
  
       <View style={styles.secondsection}>
         <View style={{backgroundColor: '#fff', height: '100%', width: '33%', alignItems:'center', justifyContent: 'center'}}>
-         <Text>sss</Text>
+         <Text>စိုက်ပျိုးဆဲ</Text>
          </View>
          <View style={{backgroundColor: '#fff', height: '100%', width: '33%', alignItems:'center', justifyContent: 'center'}}>
-         <Text>sdsd</Text>
+         <Text>ပိတ်သိမ်းရာသီများ</Text>
          </View>
          <View style={{backgroundColor: '#fff', height: '100%', width: '33%', alignItems:'center', justifyContent: 'center'}}>
-         <Text>sdss</Text>
+         <Text>အန္တရာယ်အသိပေးချက်များ</Text>
          </View>
 
       </View>

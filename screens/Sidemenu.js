@@ -18,11 +18,14 @@ contentsList = [
   {title:"သင့်အဖွဲ့အစည်းများ", icon:<Image source={require('../assets/group.jpeg')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 4},
   {title:"အသုံးဝင်သောလိပ်စာများ", icon:<Image source={require('../assets/addressicon.jpg')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 5},
   {title:"စိတ်ကြိုက်ပို့စ်များ", icon:<Image source={require('../assets/saveicon.jpg')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 6},
+  {title:"ကိုယ်ပိုင် မေးခွန်းများ", icon:<Image source={require('../assets/questions.png')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 7},
+  {title:"အကြံပြုရန်", icon:<Image source={require('../assets/suggestions.png')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 8},
+  {title:"ကိုယ်ပိုင် ရောင်းဝယ်ပို့စ်", icon:<Image source={require('../assets/tradeicon.png')} style={{width: 50, height:50, borderRadius: 100,}}/>,key : 9},
 ]
 
 
 bottomList = [
-  {title: 'ပြင်ဆင်ချက်များ' , icon: <Image source={require('../assets/settingicon.png')} style={{width: 35, height:35, borderRadius: 100, marginTop: 5}}/>, key: 7 }
+  {title: 'ပြင်ဆင်ချက်များ' , icon: <Image source={require('../assets/settingicon.png')} style={{width: 35, height:35, borderRadius: 100, marginTop: 5}}/>, key: 10 }
 ];
   const [selectedId, setSelectedId] = useState(null);
 
@@ -38,15 +41,15 @@ bottomList = [
       <View style = {styles.topsection}>
         <View style={{flexDirection: 'row'}}>
         <Image 
-           source = {require('../assets/blankprofile.jpg')}
+           source = {require('../assets/profile.png')}
            style= {styles.profile}
         />
       <View>
         <Text style={{fontSize: SIZES.h2, fontWeight: FONTWEIGHT.bold, marginLeft: 15, marginTop: 10, color: COLORS.secondary}}>Daw Nwe Aye</Text>
-        <Text style={{fontSize: SIZES.h5, fontWeight: 'normal', marginLeft: 15, marginTop: 10, color: COLORS.secondary}}>တောင်သူလယ်သမား-စစ်ကိုင်းတိုင်း</Text>
+        <Text style={{fontSize: SIZES.h5, fontWeight: 'normal', marginLeft: 15, marginTop: 2, color: COLORS.secondary}}>တောင်သူလယ်သမား-စစ်ကိုင်းတိုင်း</Text>
       </View>
       </View>
-      <TouchableOpacity style = {{width: '98%', height: 35,backgroundColor: '#c5d3f7', justifyContent: 'center', alignItems: 'center', marginTop: 12, alignSelf: 'center', elevation: 10}}>
+      <TouchableOpacity style = {{width: '98%', height: 35,backgroundColor: '#c5d3f7', justifyContent: 'center', alignItems: 'center', marginTop: 12, alignSelf: 'center', elevation: 10}} onPress={() => navigation.navigate('Profile Details')}>
         <Text style = {{color: '#00a7e7', fontSize: SIZES.h4, fontWeight: 'bold'}}> ကိုယ်ရေး အချက်အလက် သို့</Text>
       </TouchableOpacity>
       </View>

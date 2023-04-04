@@ -4,12 +4,16 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Feeding from './screens/Feeding';
 import GreenHistory from './screens/GreenHistory';
+import ProfileDetails from './screens/ProfileDetails';
+import Questions from './screens/Questions';
 import Rating from './screens/Rating';
+import SavedPosts from './screens/SavedPosts';
 import SeasonClose from './screens/SeasonClose';
 
 const {COLORS} = require('./constants/theme')
 
 import SideMenu from './screens/Sidemenu'
+import Suggestion from './screens/Suggestion';
 import ToDoQRCode from './screens/ToDoQRCode';
 import TotalCostEntry from './screens/TotalCostEntry';
 
@@ -74,7 +78,66 @@ export default function App() {
             headerShown: false
           }}
           />
+<<<<<<< HEAD
           
+=======
+
+          <Drawer.Screen
+          name= 'အကြံပြုရန်'
+          component={Suggestion}
+          options ={{
+            headerShown: true,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
+          }}
+          />
+
+         <Drawer.Screen
+          name= 'ကိုယ်ပိုင် မေးခွန်းများ'
+          component={Questions}
+          options ={{
+            headerShown: true,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
+          }}
+          />
+
+          <Drawer.Screen
+          name= 'စိတ်ကြိုက်ပို့စ်များ'
+          component={SavedPosts}
+          options ={{
+            headerShown: true,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
+          }}
+          />
+
+         <Drawer.Screen
+          name= 'Profile Details'
+          component={ProfileDetails}
+          options ={{
+            headerShown: false,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
+          }}
+          />
+>>>>>>> a5cfec0a2cd0c94a38f32ada939cd01e9cf5bac2
         </Drawer.Navigator>
 
       </NavigationContainer>
