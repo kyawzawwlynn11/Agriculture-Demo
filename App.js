@@ -9,6 +9,7 @@ import Questions from './screens/Questions';
 import Rating from './screens/Rating';
 import SavedPosts from './screens/SavedPosts';
 import SeasonClose from './screens/SeasonClose';
+import TradePost from './screens/TradePost';
 
 const {COLORS} = require('./constants/theme')
 
@@ -16,6 +17,9 @@ import SideMenu from './screens/Sidemenu'
 import Suggestion from './screens/Suggestion';
 import ToDoQRCode from './screens/ToDoQRCode';
 import TotalCostEntry from './screens/TotalCostEntry';
+import Address from './screens/Address';
+import Settings from './screens/Settings';
+import Groups from './screens/Groups';
 
 
 export default function App() {
@@ -42,14 +46,22 @@ export default function App() {
           <Drawer.Screen 
           name = 'သွင်းအားစုတွက်ချက်ရန်'
           component={TotalCostEntry}
-          options ={{
-            headerShown: false
+          options={{
+            headerShown: true,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
+            
           }}
+         
           />
           
           <Drawer.Screen 
           name = 'ပြင်ဆင်ချက်များ'
-          component={ToDoQRCode}
+          component={Settings}
           options ={{
             headerShown: false
           }}
@@ -58,29 +70,33 @@ export default function App() {
           <Drawer.Screen
           name= 'ဝယ်ယူမှုမှတ်တမ်း'
           component={Feeding}
-          options ={{
-            headerShown: false
+          options={{
+            headerShown: true,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
+            
           }}
           />
 
           <Drawer.Screen
           name= 'သင့်အဖွဲ့အစည်းများ'
-          component={Rating}
+          component={Groups}
           options ={{
-            headerShown: false
+            headerShown: true,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
           }}
           />
          
-         <Drawer.Screen
-          name= 'အသုံးဝင်သောလိပ်စာများ'
-          component={SeasonClose}
-          options ={{
-            headerShown: false
-          }}
-          />
-<<<<<<< HEAD
-          
-=======
+         
 
           <Drawer.Screen
           name= 'အကြံပြုရန်'
@@ -137,7 +153,37 @@ export default function App() {
             headerTintColor: 'white',
           }}
           />
->>>>>>> a5cfec0a2cd0c94a38f32ada939cd01e9cf5bac2
+
+           <Drawer.Screen
+          name= 'အသုံးဝင်သောလိပ်စာများ'
+          component={Address}
+          options ={{
+            headerShown: true,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
+          }}
+          />
+          
+
+          <Drawer.Screen
+          name= "ကိုယ်ပိုင် ရောင်းဝယ်ပို့စ်"
+          component={TradePost}
+          options ={{
+            headerShown: true,
+            drawerType: 'front',
+            headerTitleAlign: 'center',
+            headerStyle: {
+             backgroundColor: COLORS.green,
+            },
+            headerTintColor: 'white',
+          }}
+          />
+
+         
         </Drawer.Navigator>
 
       </NavigationContainer>
